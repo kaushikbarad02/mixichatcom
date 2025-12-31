@@ -1,8 +1,9 @@
-# MixiChat Deployment Guide (DigitalOcean + Apache)
+# MixiChat Deployment Guide
 
-This guide explains how to host your WebRTC video chat on a DigitalOcean Droplet using Apache as a reverse proxy.
+**Current Frontend URL:** [https://mixichat.netlify.app/](https://mixichat.netlify.app/)
 
-## 1. Server Preparation
+## 1. Server Preparation (For Backend Signaling)
+Netlify handles the frontend (HTML/CSS/JS) but you still need a Node.js server for the chat matching to work.
 Create an Ubuntu Droplet on DigitalOcean and run the following:
 
 ```bash
