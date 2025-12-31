@@ -26,10 +26,9 @@ async function init() {
         }
 
         // 2. Connect to Signaling Server
-        // REPLACE 'http://localhost:3000' with your DigitalOcean IP/Domain when ready
         const SOCKET_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-            ? undefined // Defaults to current domain
-            : 'https://your-backend-server.com'; // Your DigitalOcean/Render URL
+            ? undefined // Defaults to current domain for local testing
+            : 'https://mixichat-signaling.onrender.com';
 
         socket = io(SOCKET_URL);
 
